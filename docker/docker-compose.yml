@@ -1,0 +1,13 @@
+services:
+  juice-shop:
+    image: bkimminich/juice-shop
+    container_name: juice-shop
+    ports:
+      - "${JUICE_SHOP_PORT}:3000"
+    restart: unless-stopped
+    networks:
+      - devsecops-network
+
+networks:
+  devsecops-network:
+    driver: bridge

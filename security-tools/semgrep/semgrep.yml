@@ -1,0 +1,8 @@
+rules:
+  - id: auto-rules
+    languages:
+      - javascript
+      - typescript
+    message: "Using  Semgrep auto rules"
+    severity: INFO
+    pattern: $X  
