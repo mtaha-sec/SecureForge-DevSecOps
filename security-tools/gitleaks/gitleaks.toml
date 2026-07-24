@@ -1,0 +1,4 @@
+## Sécurité
+
+**[Gitleaks](https://github.com/gitleaks/gitleaks)** est un outil qui analyse votre dépôt pour détecter et bloquer la fuite de secrets (clés API, mots de passe).
+Lancez `gitleaks detect` pour analyser votre code localement.
