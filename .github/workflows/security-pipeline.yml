@@ -78,3 +78,11 @@ jobs:
           image-ref: juice-shop:latest
           format: table
           severity: CRITICAL,HIGH
+      # ==========================
+      # SonarQube Cloud(no need for the url ;))
+      # ==========================
+
+      - name: SonarQube Cloud Scan
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
