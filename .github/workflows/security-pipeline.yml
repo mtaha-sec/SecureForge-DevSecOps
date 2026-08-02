@@ -151,3 +151,18 @@ jobs:
       - name: Load Docker Image into Kind
         run: |
           kind load docker-image juice-shop:latest --name secureforge
+      # ==========================
+      # Kubernetes Deployment
+      # ==========================
+
+      - name: Deploy Namespace
+        run: |
+          kubectl apply -f kubernetes/namespace.yaml
+
+      - name: Deploy Application
+        run: |
+          kubectl apply -f kubernetes/deployment.yaml
+
+      - name: Deploy Service
+        run: |
+          kubectl apply -f kubernetes/service.yaml
