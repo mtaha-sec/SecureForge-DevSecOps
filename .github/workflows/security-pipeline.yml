@@ -134,3 +134,10 @@ jobs:
 
       - name: Install kubectl
         uses: azure/setup-kubectl@v4
+      # ==========================
+      # Create Kind Cluster
+      # ==========================
+
+      - name: Create Kind Cluster
+        run: |
+          kind create cluster --name secureforge
