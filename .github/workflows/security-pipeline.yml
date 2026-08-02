@@ -141,3 +141,13 @@ jobs:
       - name: Create Kind Cluster
         run: |
           kind create cluster --name secureforge
+      - name: Cluster Info
+        run: |
+          kubectl cluster-info
+      # ==========================
+      # Load Docker Image
+      # ==========================
+
+      - name: Load Docker Image into Kind
+        run: |
+          kind load docker-image juice-shop:latest --name secureforge
