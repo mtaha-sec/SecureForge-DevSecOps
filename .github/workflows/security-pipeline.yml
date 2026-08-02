@@ -128,3 +128,9 @@ jobs:
       - name: Verify Kind
         run: |
           kind version
+      # ==========================
+      # Install kubectl
+      # ==========================
+
+      - name: Install kubectl
+        uses: azure/setup-kubectl@v4
